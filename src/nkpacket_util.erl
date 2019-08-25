@@ -31,6 +31,7 @@
 -export([init_protocol/3, call_protocol/4]).
 -export([norm_path/1, join_path/2, conn_string/3]).
 -export([parse_opts/1, parse_uri_opts/2]).
+-export([tls_keys/0]).
 
 -include("nkpacket.hrl").
 -include_lib("nklib/include/nklib.hrl").
@@ -95,8 +96,8 @@ print_all([{_Id, _Class, Pid}|Rest]) ->
 
 
 
-%%tls_keys() ->
-%%    maps:keys(nkpacket_syntax:tls_syntax()).
+tls_keys() ->
+    maps:keys(nkpacket_syntax:tls_syntax()).
 
 
 
